@@ -1,13 +1,159 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html{
+  font-size: 62.5%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #495057;
+}
+
+.App{
+  min-height: 66vh;
+  display: grid;
+  grid-template-columns: 38rem 44rem;
+  column-gap: 4rem;
+  align-items: start;
+}
+
+.friends-section ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  gap: .4rem;
+  /* background-color: red; */
+  margin-bottom: 2rem;
+}
+
+.friends-section li{
+  display: grid;
+  grid-template-columns: 5rem 1fr auto;
+  align-items: center;
+  column-gap: 1.6rem;
+  padding: 1.6rem;
+  border-radius: 7px;
+  transition: .5s;
+}
+
+.friends-section li img{
+  grid-row: span 2;
+  grid-column: 1;
+  border-radius: 50%;
+  width: 100%;
+}
+
+.friends-section li h3{
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.friends-section li p{
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.friends-section li button{
+  grid-row: span 2;
+  grid-column: 3;
+}
+
+.button {
+  background-color: #ffa94d;
+  color: #343a40;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 1.2rem;
+  float: right;
+}
+
+.button:hover{
+  background-color: #ff922b;
+}
+
+.friends-section li:hover {
+  background-color: #fff4e6;
+}
+
+.red{
+  color: red;
+}
+.green{
+  color: green;
+}
+
+form{
+  display: grid;
+  /* padding: 1.2rem; */
+  align-items: center;
+  font-size: 1.6rem;
+  gap: 1.2rem;
+  background-color: #fff4e6;
+  border-radius: 7px;
+}
+
+.form-add-friend{
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 1.6rem;
+  padding: 1.2rem;
+}
+
+label{
+  font-weight: 600 ;
+  font-size: 1.8rem;
+  /* margin-right: 4px; */
+}
+
+input,
+select {
+  font-family: inherit;
+  color: inherit;
+  font-size: 1.5rem;
+  padding: 0.7rem;
+  text-align: center;
+  border: 1px solid #ffe8cc;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border: 1px solid #343a40;
+}
+
+form .button{
+  grid-column: 2;
+  margin-top: .6rem;
+}
+
+.form-split-bill{
+  /* display: grid; */
+  /* flex-direction: column; */
+  grid-template-columns: 1fr 12rem;
+  padding: 3rem 4rem;
+}
+
+.form-split-bill h2{
+  grid-column: span 2;
+  /* font-size: 2.2rem; */
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+}
+
+.selected{
+  background-color: #ff922b;
 }
