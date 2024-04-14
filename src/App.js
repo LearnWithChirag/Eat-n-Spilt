@@ -1,23 +1,18 @@
 import React, { useState } from "react";
 
 const initialFriends = [
-  {
-    id: 101,
-    name: "Hitesh",
-    image: "https://i.pravatar.cc/48?u=118836",
-    balance: 100,
-  },
+  
   {
     id: 102,
-    name: "Kapil",
+    name: "Ramu Kaka",
     image: "https://i.pravatar.cc/48?u=118826",
     balance: -150,
   },
   {
     id: 103,
-    name: "Himmat",
+    name: "Hira Thakur",
     image: "https://i.pravatar.cc/48?u=118846",
-    balance: 0,
+    balance: 100,
   },
 ];
 
@@ -49,7 +44,12 @@ function App() {
   }
 
   return (
+    <>
+    <div className="main-header">
+        <h1>🍟Eat-n-Split🍔</h1>
+    </div>
     <div className="App">
+     
       <div className="friends-section">
         <FriendList
           friends={friends}
@@ -63,6 +63,7 @@ function App() {
       </div>
       {selectedFriend && <FormSplitBill selectedFriend={selectedFriend} onSplitBill={handleSplitBill}/>}
     </div>
+    </>
   );
 }
 export default App;

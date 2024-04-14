@@ -15,9 +15,20 @@ body{
   justify-content: center;
   height: 100vh;
   color: #495057;
+  background-image: url(../src/Images/bg2.jpg);
+  background-size: cover;
+}
+
+.main-header{
+  display: flex;
+  font-size: 4rem;
+  justify-content: center;
+  color:#343a40;
+  font-family:  "merienda" , sans-serif;
 }
 
 .App{
+  backdrop-filter: sepia(80%);
   min-height: 66vh;
   display: grid;
   grid-template-columns: 38rem 44rem;
@@ -156,4 +167,37 @@ form .button{
 
 .selected{
   background-color: #ff922b;
+}
+
+
+@media (max-width: 48em) {
+  .App{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    gap: 2rem;
+    align-items: center;
+  }
+  .main-header{
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 31.25em){
+  .main-header{
+    font-size: 2rem;
+  }
+  .form-split-bill{
+    grid-template-columns: 1fr 8rem;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 20em){
+  .main-header{
+    font-size: 1.5rem;
+  }
+  form{
+    font-size: 1.3rem;
+  }
 }
